@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>贪食蛇</title>
+    <link rel="stylesheet" href="./css/snake.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 按钮 -->
+        <div class="btns">
+            <button class="begin btn">开始游戏</button>
+            <button class="pause btn">暂停</button>
+            <div class="right">
+                您的分数：<span class="score">0</span>
+            </div>
+        </div>
+        <!-- 背景 -->
+        <div class="mask"></div>
+        <!-- 游戏内容 -->
+        <div class="game"></div>
+        <!-- 暂停界面 -->
+        <div class="pause_plan">
+            <i></i>
+        </div>
+        <!-- 结束界面 -->
+        <div class="over_plan">
+            <dic class="content">
+                <i class="close_btn"></i>
+                <h2>游戏结束，请再接再厉！</h2>
+                <p>您的最终得分为：<span class="over_score"></span></p>
+            </dic>
+        </div>
+    </div>
+    <script src="./js/snake.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+button {border:none;background:none;outline:none;cursor: pointer;}
+
+.btn {
+    padding:5px 10px;
+    background-color: #fff;
+    border:1px solid #ddd;
+    color:#424242;
+    border-radius:5px;
+    user-select: none;
+}
+.btn:active {
+    background-color:rgba(0,0,0,.06);
+}
+
+
+
+.wrapper {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:500px;
+    height:500px;
+    border:1px solid #ddd;
+    margin:auto;
+}
+
+/* 按钮 */
+.wrapper .btns {
+    position: absolute;
+    top:-50px;
+    height:50px;
+    width:100%;
+    line-height:50px;
+}
+.wrapper .begin {
+    background-color: #3c3;
+    color:#fff;
+}
+.wrapper .pause {
+    background-color: #4fbdef;
+    color:#fff;
+    margin-left: 20px;
+}
+.wrapper .btns .right {
+    float: right;
+    margin-right:20px;
+}
+.wrapper .right span {
+    color:#f00;
+}
+
+.wrapper .pause.btn {
+    display:none;
+}
+
+/* 背景，游戏界面，暂停界面 */
+.mask,.game,.pause_plan,.over_plan {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    user-select: none;
+}
+
+
+/* 背景 */
+.mask .pixel {
+    float: left;
+    width:25px;
+    height:25px;
+    background-color: #96c;
+    box-sizing:border-box;
+    /* border-right:1px solid rgba(255,255,255,.2); */
+    /* border-bottom:1px solid rgba(255,255,255,.2); */
+}
+
+
+
+
+/* 游戏界面 */
+
+.game .snake {
+    position: absolute;
+    width:25px;
+    height:25px;
+    background-color:#f9c;
+    border-radius:50%;
+}
+.game .header {
+    background-color: #f66;
+    text-align:center;
+    line-height:25px;
+    color:#fff;
+}
+
+
+.game .food {
+    position: absolute;
+    width:25px;
+    height:25px;
+    background-color:#f9c;
+    border-radius:50%;
+}
+
+
+/* 暂停界面 */
+.pause_plan {
+    display:none;
+    background-color: rgba(0,0,0,.7);
+    z-index:999;
+}
+.pause_plan i {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:50px;
+    height:50px;
+    background: url("../images/play.png") no-repeat 0/contain;
+    cursor: pointer;
+}
+
+/* 游戏结束界面 */
+
+.over_plan {
+    display:none;
+    background-color: rgba(0,0,0,.7);
+    z-index: 999;
+}
+.over_plan .content{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:300px;
+    height:200px;
+    /* box-sizing:border-box; */
+    padding:50px;
+    background:url("../images/gameOver.jpg") no-repeat center 150px/50% #fff;
+    text-align:center;
+    z-index: 999;
+}
+
+.over_plan .content i {
+    position: absolute;
+    top:10px;
+    right:10px;
+    width:30px;
+    height:30px;
+    background:url("../images/close.png") no-repeat 0 0/contain;
+    cursor: pointer;
+}
+.over_plan .content p {
+    margin-top:10px;
+}
+.over_plan .content span {
+    color:#f00;
+    font-weight:bold;
+}
